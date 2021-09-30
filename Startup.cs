@@ -1,4 +1,5 @@
 using LojaLanches.Context;
+using LojaLanches.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,10 @@ namespace LojaLanches
         {
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<ICategoriaRepositorio, CategoriaRepositorio>();
+            services.AddTransient<ILancheRepositorio, LancheRepositorio>();
+
             services.AddControllersWithViews();
         }
 
