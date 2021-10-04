@@ -1,4 +1,5 @@
 ﻿using LojaLanches.Repositories;
+using LojaLanches.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,13 @@ namespace LojaLanches.Controllers
             ViewBag.Lanche = "Lanches";
             ViewData["Categoria"] = "Categoria";
 
-            var lanches = _lancheRepositorio.Lanches;
-            return View(lanches);
+            // var lanches = _lancheRepositorio.Lanches;
+            // return View(lanches);
+
+            var lancheslistViewModel = new LancheListViewModel();
+            lancheslistViewModel.Lanches = _lancheRepositorio.Lanches;
+            lancheslistViewModel.CategoriaAtual = "Categoria Atual";
+            return View(lancheslistViewModel);
         }
     }
 }
