@@ -2,21 +2,17 @@
 
 <div><h2>@Model.CategoriaAtual</h2></div>
 
+
 <div class="row">
 
-    @foreach (var lanche in Model.Lanches)
-    {
-        <div class="col-sm-4 col-lg-4 col-md-4">
-            <div class="thumbnail">
-                <p><img src="@lanche.ImagemUrl" class="img-rounded" /></p>
-            </div>
-            <div class="caption">
-                <h3 class="pull-righ"> @lanche.Preco.ToString("c")</h3>
-                <h3>
-                    @lanche.Nome
-                </h3>
-                <p>@lanche.DescricaoCurta</p>
-            </div>
-        </div>
-    }
+@foreach (var lanche in Model.Lanches)
+{   
+    // Maneira desatualizada de referenciar uma Partial View
+   // @Html.Partial("_LancheResumo", lanche);
+
+    // Maneira atualizada de referenciar uma Partial View
+    <partial name="_LancheResumo" for="@lanche"/>
+    
+}
 </div>
+

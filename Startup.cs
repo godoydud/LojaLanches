@@ -1,7 +1,9 @@
 using LojaLanches.Context;
+using LojaLanches.Models;
 using LojaLanches.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,7 +33,10 @@ namespace LojaLanches
 
             services.AddTransient<ICategoriaRepositorio, CategoriaRepositorio>();
             services.AddTransient<ILancheRepositorio, LancheRepositorio>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            services.AddScoped(cp => CarrinhoCompra.GetCarrinho(cp));
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -50,6 +55,7 @@ namespace LojaLanches
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
