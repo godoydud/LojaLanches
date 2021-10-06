@@ -155,3 +155,4 @@ C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\LojaLanches.
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\LojaLanches.genruntimeconfig.cache
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Lanche\List.cshtml.g.cs
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LancheResumo.cshtml.g.cs
+C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\CarrinhoCompra\Index.cshtml.g.cs
