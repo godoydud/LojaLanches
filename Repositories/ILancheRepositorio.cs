@@ -1,4 +1,5 @@
 ﻿using LojaLanches.Models;
+using LojaLanches.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,6 @@ namespace LojaLanches.Repositories
     {
         IEnumerable<Lanche> Lanches { get; }
         IEnumerable<Lanche> LanchesPreferidos { get; }
-        ILancheRepositorio GetLacheById(int lancheId);
+        Lanche GetLancheById(int lancheId);
     }
 }

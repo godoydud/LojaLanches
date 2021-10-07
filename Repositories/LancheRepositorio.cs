@@ -16,14 +16,11 @@ namespace LojaLanches.Repositories
         {
             _context = contexto;
         }
+
         public IEnumerable<Lanche> Lanches => _context.Lanches.Include(c => c.Categoria);
 
-        public IEnumerable<Lanche> LanchesPreferidos => _context.Lanches.Where(p =>
-        p.IsLanchePreferido).Include(c => c.Categoria);
+        public IEnumerable<Lanche> LanchesPreferidos => _context.Lanches.Where(p => p.IsLanchePreferido).Include(c => c.Categoria);
 
-        public ILancheRepositorio GetLacheById(int lancheId)
-        {
-            throw new NotImplementedException();
-        }
+        public Lanche GetLancheById(int lancheId) => _context.Lanches.FirstOrDefault(l => l.LancheId == lancheId);
     }
 }
