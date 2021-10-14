@@ -1,0 +1,14 @@
+﻿@model CarrinhoCompraViewModel
+// Método para que se existir itens no carrinho
+
+@if (Model.CarrinhoCompra.CarrinhoCompraItens.Count > 0)
+{
+    <li>
+        <a asp-controller="CarrinhoCompra">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            <span id="cart-status">
+                @Model.CarrinhoCompra.CarrinhoCompraItens.Count
+            </span>
+        </a>
+    </li>
+}

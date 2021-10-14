@@ -157,3 +157,6 @@ C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\CarrinhoCompra\Index.cshtml.g.cs
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
 C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LanchesResumo.cshtml.g.cs
+C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CarrinhoCompraResumo\Dafault.cshtml.g.cs
+C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoriaMenu\Default.cshtml.g.cs
+C:\Users\estagiosst14\Documents\LojaLanches\obj\Debug\netcoreapp3.1\Razor\Views\Contato\Index.cshtml.g.cs
